@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: selenium-node-chrome-sample
+  labels:
+    app: selenium-node-chrome-sample
+spec:
+  ports:
+  - port: 5900
+    targetPort: 5900
+    name: port0
+  selector:
+    app: selenium-node-chrome-sample
+  type: NodePort
+  sessionAffinity: None
